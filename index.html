@@ -1,121 +1,265 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Responsive Owl-Carousel Slider | CodingNepal</title>
-      <link rel="stylesheet" href="style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-   <style>
-  body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-  .wrapper{
-    width: 100%;
-  }
-  .carousel{
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 30px;
-  }
-  .carousel .card{
-    color: #fff;
-    text-align: center;
-    margin: 20px 0;
-    line-height: 250px;
-    font-size: 90px;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  }
-  .carousel .card-1{
-    background: #ed1c24;
-  }
-  .carousel .card-2{
-    background: #0072bc;
-  }
-  .carousel .card-3{
-    background: #39b54a;
-  }
-  .carousel .card-4{
-    background: #f26522;
-  }
-  .carousel .card-5{
-    background: #630460;
-  }
-  .owl-dots{
-    text-align: center;
-    margin-top: 40px;
-  }
-  .owl-dot{
-    height: 15px;
-    width: 45px;
-    margin: 0 5px;
-    outline: none;
-    border-radius: 14px;
-    border: 2px solid #0072bc!important;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-  .owl-dot.active,
-  .owl-dot:hover{
-    background: #0072bc!important;
-  }
-  
-.new-style{
-    display: none;
-}
+
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Owl-Carousel Slider | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .carousel {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    .carousel .card {
+      color: #fff;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      border: 2px solid red !important;
+      background: white !important;
+    }
+/* 
+    .carousel .card-1 {
+      background: #ed1c24;
+    }
+
+    .carousel .card-2 {
+      background: #0072bc;
+    }
+
+    .carousel .card-3 {
+      background: #39b54a;
+    }
+
+    .carousel .card-4 {
+      background: #f26522;
+    }
+
+    .carousel .card-5 {
+      background: #630460;
+    } */
+
+    .owl-dots {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .owl-dot {
+      height: 15px;
+      width: 45px;
+      margin: 0 5px;
+      outline: none;
+      border-radius: 14px;
+      border: 2px solid #0072bc !important;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .owl-dot.active,
+    .owl-dot:hover {
+      background: #0072bc !important;
+    }
+
+    .new-style {
+      display: none;
+    }
+
+    .customer-image-and-review-logo-image {
+      width: 100%;
+      /* border: 2px solid orangered; */
+      display: flex;
+    }
+
+    .cutomer-image-box {
+      width: 25%;
+      /* border: 2px solid black; */
+    }
+
+    .review-logo-image-box {
+      width: 80%;
+      /* border: 2px solid gray; */
+      display: flex;
+      align-items: center;
+      padding-left: 20PX;
+    }
+
+    .cutomer-name-with-location {
+      font-size: 30px;
+      margin-top: 15px;
+    margin-bottom: 15PX;
+    color: #b70016;
+    }
+
+    .customer-comma-icon-bottom-box {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+    }
+    .cutomer-review-description{
+      height: 80px;
+      overflow-y: scroll;
+      padding: 10px;
+      font-weight: 500;
+      color: black;
+    }
+    .customer-id-style{
+      font-weight: 600;
+      color: black;
+    }
+    .Review-date{
+      font-weight: 600;
+      margin-top: -10px;
+      color: black;
+    }
+    .customer-comma-icon-size-adjust{
+      width: 30px !important;
+    }
+    .customer-id{
+      margin-top: -10px;
+      color: black;
+    }
+    .Customer-image-size-adjust{
+      width: 100%;
+    }
+    .reviews-logo-size-adjust{
+      width: 70% !important;
+    }
   </style>
-    </head>
-   <body>
-      <div class="wrapper">
-         <div class="carousel owl-carousel">
-            <div class="card card-1">
-               A
-            </div>
-            <div class="card card-2">
-               B
-            </div>
-            <div class="card card-3">
-               C
-            </div>
-            <div class="card card-4">
-               D
-            </div>
-            <div class="card card-5">
-               E
-            </div>
-            <div class="card card-5">
-               E
-            </div>
-         </div>
-      <script>
-         $(".carousel").owlCarousel({
-           margin: 20,
-           loop: true,
-           autoplay: true,
-           autoplayTimeout: 2000,
-           autoplayHoverPause: true,
-           responsive: {
-             0:{
-               items:1,
-               nav: false
-             },
-             600:{
-               items:2,
-               nav: false
-             },
-             1000:{
-               items:3,
-               nav: false
-             }
-           }
-         });
-      </script>
-   </body>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="carousel owl-carousel">
+      <div class="card card-1">
+        <div class="customer-image-and-review-logo-image">
+          <div class="cutomer-image-box">
+            <img src="preeti.webp" alt="Customer-image" class="Customer-image-size-adjust">
+          </div>
+          <div class="review-logo-image-box">
+            <img src="sitejabber.webp" alt="Reviews-website-logo-and-icon" class="reviews-logo-size-adjust">
+          </div>
+        </div>
+        <h5 class="cutomer-name-with-location">Preeti, Sharjah</h5>
+        <img src="comma-top.webp" alt="customer-comma-icon" class="customer-comma-icon-size-adjust">
+        <p class="cutomer-review-description">I was struggling to get noticed in the job market until I found CV Dubai
+          for my CV writing. The team was professional and friendly, guiding me every step of the way.</p>
+        <div class="customer-comma-icon-bottom-box">
+          <img src="comma-bottom.webp" alt="customer-button-comma-icon" class="customer-comma-icon-size-adjust">
+        </div>
+        <p class="customer-id"><span class="customer-id-style">Customer ID :</span> #187354</p>
+        <p class="Review-date">03/15/2024</p>
+      </div>
+
+      <div class="card card-1">
+        <div class="customer-image-and-review-logo-image">
+          <div class="cutomer-image-box">
+            <img src="preeti.webp" alt="Customer-image" class="Customer-image-size-adjust">
+          </div>
+          <div class="review-logo-image-box">
+            <img src="sitejabber.webp" alt="Reviews-website-logo-and-icon" class="reviews-logo-size-adjust">
+          </div>
+        </div>
+        <h5 class="cutomer-name-with-location">Mohamed, Ras Al Khaimah</h5>
+        <img src="comma-top.webp" alt="customer-comma-icon" class="customer-comma-icon-size-adjust">
+        <p class="cutomer-review-description">Securing the job I was previously rejected from seemed impossible until I had my resume edited by Dubai CV Maker. Their CV Maker Dubai service is authentic, and their writers represented my personality perfectly.</p>
+        <div class="customer-comma-icon-bottom-box">
+          <img src="comma-bottom.webp" alt="customer-button-comma-icon" class="customer-comma-icon-size-adjust">
+        </div>
+        <p class="customer-id"><span class="customer-id-style">Customer ID :</span>#923456</p>
+        <p class="Review-date">06/30/2022</p>
+      </div>
+
+      <div class="card card-1">
+        <div class="customer-image-and-review-logo-image">
+          <div class="cutomer-image-box">
+            <img src="preeti.webp" alt="Customer-image" class="Customer-image-size-adjust">
+          </div>
+          <div class="review-logo-image-box">
+            <img src="sitejabber.webp" alt="Reviews-website-logo-and-icon" class="reviews-logo-size-adjust">
+          </div>
+        </div>
+        <h5 class="cutomer-name-with-location">G.Y, Jumeirah</h5>
+        <img src="comma-top.webp" alt="customer-comma-icon" class="customer-comma-icon-size-adjust">
+        <p class="cutomer-review-description">As a doctor wanting to change jobs, time was limited for writing my resume. Then I found this CV writing service in Abu Dhabi, they followed my instructions to write my detailed resume and helped me get a job in a new field.</p>
+        <div class="customer-comma-icon-bottom-box">
+          <img src="comma-bottom.webp" alt="customer-button-comma-icon" class="customer-comma-icon-size-adjust">
+        </div>
+        <p class="customer-id"><span class="customer-id-style">Customer ID :</span>#456721</p>
+        <p class="Review-date">11/09/2023</p>
+      </div>
+
+      <div class="card card-1">
+        <div class="customer-image-and-review-logo-image">
+          <div class="cutomer-image-box">
+            <img src="preeti.webp" alt="Customer-image" class="Customer-image-size-adjust">
+          </div>
+          <div class="review-logo-image-box">
+            <img src="sitejabber.webp" alt="Reviews-website-logo-and-icon" class="reviews-logo-size-adjust">
+          </div>
+        </div>
+        <h5 class="cutomer-name-with-location">Niha, Abu Dhabi</h5>
+        <img src="comma-top.webp" alt="customer-comma-icon" class="customer-comma-icon-size-adjust">
+        <p class="cutomer-review-description">After graduating a year ago and searching for jobs without success, I discovered Dubai CV Maker. After receiving my urgent order, I landed 4 interviews in a week and secured a well-paid job in a month. It all happened due to Dubai CV Maker and the team.</p>
+        <div class="customer-comma-icon-bottom-box">
+          <img src="comma-bottom.webp" alt="customer-button-comma-icon" class="customer-comma-icon-size-adjust">
+        </div>
+        <p class="customer-id"><span class="customer-id-style">Customer ID :</span>#675839</p>
+        <p class="Review-date">12/01/2021</p>
+      </div>
+
+     
+      
+      
+      
+      
+      
+    </div>
+    <script>
+      $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          600: {
+            items: 2,
+            nav: false
+          },
+          1000: {
+            items: 3,
+            nav: false
+          }
+        }
+      });
+    </script>
+</body>
+
 </html>
